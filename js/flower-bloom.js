@@ -90,7 +90,7 @@ class FlowerBloom {
                     color: rgba(255,255,255,0.9);
                     margin-bottom: 30px;
                     text-shadow: 0 2px 10px rgba(0,0,0,0.2);
-                ">For Jim</h1>
+                ">For carolyne</h1>
                 <div id="miniGiftBox" style="
                     width: 120px;
                     height: 100px;
