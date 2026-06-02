@@ -1,0 +1,320 @@
+/* Letter Section - Hidden initially, revealed after gift */
+.letter-section {
+    min-height: 100vh;
+    position: relative;
+    padding: 60px 20px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1.5s ease;
+}
+
+.letter-section.revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.letter-bg {
+    background: linear-gradient(180deg, #f8e1e7 0%, #ffe4e9 30%, #ffd1dc 100%);
+    min-height: 100vh;
+    position: relative;
+    padding: 40px 20px;
+}
+
+/* Torn Paper Edges */
+.torn-edge {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.torn-edge.top {
+    top: -38px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 40'%3E%3Cpath d='M0,40 Q50,35 100,38 T200,36 T300,39 T400,35 T500,38 T600,36 T700,39 T800,35 T900,38 T1000,36 T1100,39 T1200,35 L1200,40 Z' fill='%23f8e1e7'/%3E%3C/svg%3E");
+}
+
+.torn-edge.bottom {
+    bottom: -38px;
+    transform: rotate(180deg);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 40'%3E%3Cpath d='M0,40 Q50,35 100,38 T200,36 T300,39 T400,35 T500,38 T600,36 T700,39 T800,35 T900,38 T1000,36 T1100,39 T1200,35 L1200,40 Z' fill='%23ffd1dc'/%3E%3C/svg%3E");
+}
+
+/* Dearest Title */
+.dearest {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.8rem;
+    color: #a08090;
+    text-align: center;
+    margin-bottom: 40px;
+    text-shadow: 1px 1px 2px rgba(255,255,255,0.8);
+    letter-spacing: 2px;
+}
+
+/* Letter Content */
+.letter-content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto 40px;
+    position: relative;
+}
+
+/* Daisy Bouquet */
+.daisy-bouquet {
+    position: relative;
+    flex-shrink: 0;
+    width: 180px;
+    margin-top: 20px;
+}
+
+.daisy {
+    width: 100px;
+    position: absolute;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+    background: transparent !important;
+    background-color: transparent !important;
+}
+
+.daisy:nth-child(1) {
+    top: 0;
+    left: 20px;
+    transform: rotate(-10deg);
+}
+
+.daisy:nth-child(2) {
+    top: 30px;
+    left: 0;
+    transform: rotate(5deg);
+    z-index: 2;
+}
+
+.daisy:nth-child(3) {
+    top: 50px;
+    left: 40px;
+    transform: rotate(15deg);
+}
+
+/* Hide broken daisy images */
+.daisy:not([src]),
+.daisy[src=""],
+.daisy[src="#"] {
+    display: none !important;
+}
+
+.wrap {
+    position: absolute;
+    bottom: -60px;
+    left: 10px;
+    width: 80px;
+    height: 100px;
+    background: linear-gradient(145deg, #c4a882 0%, #a89060 100%);
+    clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+    z-index: 1;
+}
+
+.ribbon-green {
+    position: absolute;
+    bottom: -30px;
+    left: 35px;
+    width: 30px;
+    height: 40px;
+    background: #1a472a;
+    border-radius: 0 0 50% 50%;
+    z-index: 3;
+}
+
+.ribbon-green::after {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 15px;
+    background: #1a472a;
+    border-radius: 50%;
+}
+
+/* Letter Paper */
+.letter-paper {
+    background: linear-gradient(145deg, #fefefe 0%, #f8f6f3 100%);
+    padding: 40px 35px;
+    border-radius: 2px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08), 0 1px 3px rgba(0,0,0,0.05);
+    position: relative;
+    max-width: 400px;
+    min-height: 300px;
+}
+
+.letter-paper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: repeating-linear-gradient(
+        transparent,
+        transparent 28px,
+        rgba(212, 168, 67, 0.05) 28px,
+        rgba(212, 168, 67, 0.05) 29px
+    );
+    pointer-events: none;
+}
+
+/* Wax Seal */
+.wax-seal {
+    position: absolute;
+    top: -20px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: radial-gradient(circle at 30% 30%, #c4a4a4 0%, #a08080 100%);
+    border-radius: 50%;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2), inset 0 -2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+.wax-seal::before {
+    content: '';
+    position: absolute;
+    inset: 3px;
+    border: 2px solid rgba(255,255,255,0.3);
+    border-radius: 50%;
+}
+
+.seal-letter {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    color: rgba(255,255,255,0.9);
+    font-style: italic;
+}
+
+/* Letter Text */
+.letter-text {
+    position: relative;
+    z-index: 2;
+}
+
+.from-line, .to-line {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    color: #3d2914;
+    margin-bottom: 5px;
+}
+
+.from-line .sender, .to-line .recipient {
+    font-weight: 700;
+}
+
+.message {
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #5c4033;
+    margin-top: 20px;
+    font-style: italic;
+}
+
+/* Postcard */
+.postcard {
+    max-width: 320px;
+    margin: 0 auto;
+    background: linear-gradient(145deg, #faf6f0 0%, #f0e8d8 100%);
+    border: 8px solid transparent;
+    border-image: repeating-linear-gradient(
+        45deg,
+        #d4a5b5,
+        #d4a5b5 10px,
+        #ffe4e9 10px,
+        #ffe4e9 20px
+    ) 8;
+    padding: 20px;
+    position: relative;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transform: rotate(-2deg);
+}
+
+.postcard-stamp {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 40px;
+    height: 50px;
+    background: linear-gradient(145deg, #e8e8e8 0%, #d0d0d0 100%);
+    border: 1px dashed #999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.postcard-stamp img {
+    width: 30px;
+    opacity: 0.7;
+}
+
+.postcard-content {
+    padding-right: 50px;
+}
+
+.handwritten {
+    font-family: 'Caveat', cursive;
+    font-size: 1.3rem;
+    color: #5c4033;
+    line-height: 1.6;
+    transform: rotate(-1deg);
+}
+
+.postcard-divider {
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent 0%, #8b7355 50%, transparent 100%);
+    margin: 15px 0;
+}
+
+.postcard-address {
+    display: flex;
+    gap: 10px;
+    font-family: 'Lato', sans-serif;
+    font-size: 0.75rem;
+    color: #8b7355;
+}
+
+.postcard-from {
+    font-weight: 700;
+    color: #5c4033;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .letter-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .daisy-bouquet {
+        margin-bottom: 30px;
+    }
+    
+    .letter-paper {
+        padding: 30px 20px;
+        max-width: 100%;
+    }
+    
+    .dearest {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .dearest {
+        font-size: 1.6rem;
+    }
+}

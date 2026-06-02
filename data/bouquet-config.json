@@ -1,0 +1,40 @@
+{
+    "recipient": {
+        "name": "Carolyne Wanyoike",
+        "pin": "0725"
+    },
+    "sender": {
+        "name": "Partner",
+        "nickname": "Your Dearest Partner"
+    },
+    "theme": {
+        "primaryColor": "gold",
+        "flowerPalette": [
+            "yellow",
+            "pink",
+            "red"
+        ]
+    },
+    "letter": {
+        "message": "I hope you keep finding small reasons to smile each day, even when life feels routine or overwhelming. Wishing you patience for the process, strength for the hard parts, and joy in the progress you're making.",
+        "postcardText": "always find time for the things that make you feel happy To be alive"
+    },
+    "media": {
+        "photos": [
+            "photo1.jpg",
+            "photo2.jpg",
+            "photo3.jpg",
+            "photo4.jpg",
+            "photo5.jpg",
+            "photo6.jpg"
+        ],
+        "mapLocation": {
+            "lat": 16.4637,
+            "lng": 107.5908,
+            "label": "Phú Hồ, Thừa Thiên Huế"
+        },
+        "youtubeVideo": "dQw4w9WgXcQ",
+        "spotifyTrack": "https://open.spotify.com/track/6eDMElxee8xeY7jTTVabPp",
+        "voiceNote": "assets/audio/voice-note.mp3"
+    }
+}

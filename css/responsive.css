@@ -1,0 +1,123 @@
+/* Tablet */
+@media (max-width: 1024px) {
+    .letter-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .daisy-bouquet {
+        margin-bottom: 30px;
+    }
+
+    .widgets-container {
+        flex-direction: column;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .dearest {
+        font-size: 2rem;
+    }
+
+    .letter-paper {
+        padding: 30px 20px;
+        max-width: 100%;
+    }
+
+    .polaroid {
+        width: 140px;
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        margin: 10px;
+        display: inline-block;
+    }
+
+    .photos-bg {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 20px;
+    }
+
+    .number-pad {
+        grid-template-columns: repeat(3, 55px);
+        gap: 10px;
+    }
+
+    .num-btn {
+        width: 55px;
+        height: 55px;
+    }
+
+    .gift-box {
+        transform: scale(0.8);
+    }
+
+    .voice-note-widget {
+        min-width: auto;
+        padding: 10px 15px;
+    }
+
+    .waveform {
+        gap: 2px;
+    }
+
+    .waveform .bar {
+        width: 2px;
+    }
+
+    .watermark {
+        font-size: 0.75rem;
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+    .dearest {
+        font-size: 1.6rem;
+    }
+
+    .from,
+    .to {
+        font-size: 1.1rem;
+    }
+
+    .heart-lock {
+        width: 80px;
+    }
+
+    .key {
+        width: 40px;
+    }
+
+    .polaroid {
+        width: 120px;
+    }
+
+    .polaroid img {
+        height: 120px;
+    }
+}
+
+/* Mobile iframe fixes */
+@media (max-width: 768px) {
+    .widgets-container {
+        flex-direction: column;
+    }
+
+    .widget {
+        width: 100%;
+    }
+
+    .video-container {
+        padding-bottom: 56.25%;
+        /* Maintain 16:9 aspect ratio */
+    }
+
+    .spotify-widget iframe {
+        height: 80px;
+        /* Smaller on mobile */
+    }
+}

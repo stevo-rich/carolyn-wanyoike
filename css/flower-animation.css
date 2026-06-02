@@ -1,0 +1,84 @@
+/* Flower Explosion Container */
+.flower-explosion {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 50;
+    overflow: hidden;
+    opacity: 0;
+}
+
+.flower-explosion.active {
+    opacity: 1;
+}
+
+/* Individual Bloom Flowers - FIXED TRANSPARENCY */
+.bloom-flower {
+    position: absolute;
+    will-change: transform, opacity;
+    /* CRITICAL: Force transparent background */
+    background: transparent !important;
+    background-color: transparent !important;
+    /* Remove any potential image background artifacts */
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    /* Ensure PNG transparency works */
+    mix-blend-mode: normal;
+}
+
+/* Hide broken image icons */
+.bloom-flower:not([src]) {
+    display: none !important;
+}
+
+/* Alternative: if images fail to load, hide them */
+.bloom-flower[src=""],
+.bloom-flower[src="#"],
+.bloom-flower[src="undefined"] {
+    display: none !important;
+}
+
+/* Flower Bloom Keyframes */
+@keyframes flowerBloom {
+    0% {
+        transform: translate(-50%, -50%) scale(0) rotate(0deg);
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(var(--end-x), var(--end-y)) scale(var(--scale)) rotate(var(--rotation));
+        opacity: 1;
+    }
+}
+
+/* Transition overlay */
+.transition-overlay {
+    position: fixed;
+    inset: 0;
+    background: var(--gold-pale);
+    z-index: 60;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.transition-overlay.active {
+    animation: goldFade 1s forwards;
+}
+
+@keyframes goldFade {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
