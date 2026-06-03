@@ -16,7 +16,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: radial-gradient(ellipse at center, #006AA7 0%, #004B87 40%, #003366 100%);
+    background: radial-gradient(ellipse at center, #d4a843 0%, #b8941f 40%, #8b6914 100%);
     position: fixed;
     /* FIXED: Stay in place */
     top: 0;
@@ -91,7 +91,7 @@
     position: relative;
     width: 100%;
     height: 100%;
-    background: linear-gradient(145deg, #faf8f5 0%, #f0ebe3 100%);
+    background: linear-gradient(145deg, #006AA7 0%, #004B87 100%);
     border-radius: 4px;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.8);
 }
@@ -123,7 +123,7 @@
     transform: translateX(-50%);
     width: 24px;
     height: 100%;
-    background: linear-gradient(90deg, #5c0015 0%, #800020 50%, #5c0015 100%);
+    background: linear-gradient(90deg, #FECC00 0%, #FFD700 50%, #FECC00 100%);
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
     z-index: 2;
 }
@@ -135,7 +135,7 @@
     transform: translateY(-50%);
     width: 100%;
     height: 24px;
-    background: linear-gradient(180deg, #5c0015 0%, #800020 50%, #5c0015 100%);
+    background: linear-gradient(180deg, #FECC00 0%, #FFD700 50%, #FECC00 100%);
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
     z-index: 2;
 }
@@ -153,7 +153,7 @@
     position: absolute;
     width: 45px;
     height: 28px;
-    background: linear-gradient(145deg, #a04060 0%, #800020 100%);
+    background: linear-gradient(145deg, #FFD700 0%, #FECC00 100%);
     border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
     top: 0;
@@ -178,7 +178,7 @@
     transform: translateX(-50%);
     width: 22px;
     height: 22px;
-    background: radial-gradient(circle at 30% 30%, #a04060 0%, #800020 100%);
+    background: radial-gradient(circle at 30% 30%, #FFD700 0%, #FECC00 100%);
     border-radius: 50%;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
     z-index: 3;
@@ -196,7 +196,7 @@
     position: absolute;
     width: 14px;
     height: 45px;
-    background: linear-gradient(180deg, #800020 0%, #5c0015 100%);
+    background: linear-gradient(180deg, #FECC00 0%, #FFD700 100%);
     border-radius: 0 0 50% 50%;
     top: 0;
 }
@@ -218,7 +218,7 @@
     left: -12px;
     width: 174px;
     height: 38px;
-    background: linear-gradient(145deg, #faf8f5 0%, #f0ebe3 100%);
+    background: linear-gradient(145deg, #006AA7 0%, #004B87 100%);
     border-radius: 4px 4px 2px 2px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     transform-origin: left center;
