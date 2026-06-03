@@ -75,7 +75,7 @@ class FlowerBloom {
             <div style="
                 position: fixed;
                 inset: 0;
-                background: radial-gradient(ellipse at center, #d4a843 0%, #b8941f 40%, #8b6914 100%);
+                background: radial-gradient(ellipse at center, #006AA7 0%, #004B87 40%, #003366 100%);
                 display: flex;
                 flex-direction: column;
                 align-items: center;
@@ -94,7 +94,7 @@ class FlowerBloom {
                 <div id="miniGiftBox" style="
                     width: 120px;
                     height: 100px;
-                    background: linear-gradient(145deg, #faf8f5 0%, #f0ebe3 100%);
+                    background: linear-gradient(145deg, #006AA7 0%, #004B87 100%);
                     border-radius: 4px;
                     position: relative;
                     box-shadow: 0 8px 25px rgba(0,0,0,0.2);
@@ -105,7 +105,7 @@ class FlowerBloom {
                         left: -5px;
                         width: 130px;
                         height: 25px;
-                        background: linear-gradient(145deg, #faf8f5 0%, #f0ebe3 100%);
+                        background: linear-gradient(145deg, #006AA7 0%, #004B87 100%);
                         border-radius: 4px;
                         animation: miniLidPop 0.6s 1s forwards;
                     "></div>
@@ -115,7 +115,7 @@ class FlowerBloom {
                         left: 0;
                         width: 100%;
                         height: 20px;
-                        background: #800020;
+                        background: #FECC00;
                         transform: translateY(-50%);
                     "></div>
                     <div style="
@@ -124,7 +124,7 @@ class FlowerBloom {
                         left: 50%;
                         width: 20px;
                         height: 100%;
-                        background: #800020;
+                        background: #FECC00;
                         transform: translateX(-50%);
                     "></div>
                 </div>
