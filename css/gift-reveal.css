@@ -16,7 +16,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: radial-gradient(ellipse at center, #d4a843 0%, #b8941f 40%, #8b6914 100%);
+    background: radial-gradient(ellipse at center, #006AA7 0%, #004B87 40%, #003366 100%);
     position: fixed;
     /* FIXED: Stay in place */
     top: 0;
