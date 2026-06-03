@@ -93,11 +93,11 @@
     }
 
     .polaroid {
-        width: 120px;
+        width: 200px;
     }
 
     .polaroid img {
-        height: 120px;
+        height: 200px;
     }
 }
 
